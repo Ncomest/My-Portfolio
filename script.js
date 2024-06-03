@@ -1,7 +1,7 @@
 const slides = [
  {
   web: "https://ncomest.github.io/Landing-market/",
-  image: "url(/image/project1.png)",
+  image: "url(image/project1.png)",
   title: "Landing page",
   text:
    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda laborum maiores consequuntur magni, inventore, animi consequatur quis quibusdam debitis nemo vitae maxime provident.",
@@ -12,7 +12,7 @@ const slides = [
  },
  {
   web: "https://wtube.vercel.app",
-  image: "url(/image/project2.png)",
+  image: "url(image/project2.png)",
   title: "WTube - база данных фильмов",
   text:
    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda laborum maiores consequuntur magni, inventore, animi consequatur quis quibusdam debitis nemo vitae maxime provident.",
