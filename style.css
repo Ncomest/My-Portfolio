@@ -36,10 +36,36 @@ header {
   border: 1px solid #a2a2a2;
   background-color: rgba(44, 43, 43, 0.2078431373);
 }
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+  }
+}
+header .burger {
+  display: none;
+  height: 60px;
+  width: 60px;
+}
+@media (max-width: 768px) {
+  header .burger {
+    display: flex;
+  }
+  header .burger i {
+    display: block;
+    align-self: center;
+    font-size: 50px;
+    color: #d4d4d4;
+  }
+}
 header nav {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
 }
 header nav button {
   display: flex;
@@ -105,6 +131,12 @@ main .welcome-section .side-bar-left {
   top: 30%;
   left: 50px;
 }
+@media (max-width: 425px) {
+  main .welcome-section .side-bar-left {
+    width: 50px;
+    gap: 20px;
+  }
+}
 main .welcome-section .side-bar-left .sbl {
   display: flex;
   align-items: center;
@@ -123,6 +155,11 @@ main .welcome-section .side-bar-left .sbl::after {
   top: 50px;
   left: 24px;
 }
+@media (max-width: 425px) {
+  main .welcome-section .side-bar-left .sbl::after {
+    height: 20px;
+  }
+}
 main .welcome-section .side-bar-left .sbl:first-child::before {
   content: " ";
   position: absolute;
@@ -132,6 +169,12 @@ main .welcome-section .side-bar-left .sbl:first-child::before {
   background-color: aliceblue;
   top: -50px;
   left: 24px;
+}
+@media (max-width: 425px) {
+  main .welcome-section .side-bar-left .sbl:first-child::before {
+    height: 20px;
+    top: -20px;
+  }
 }
 main .welcome-section .side-bar-left .sbl i {
   font-size: 40px;
@@ -148,11 +191,33 @@ main .welcome-section .main-container {
   margin-bottom: 150px;
   color: #d4d4d4;
 }
+@media (max-width: 768px) {
+  main .welcome-section .main-container {
+    gap: 100px;
+  }
+}
+@media (max-width: 425px) {
+  main .welcome-section .main-container {
+    max-width: 300px;
+    margin-left: 20px;
+  }
+}
 main .welcome-section .main-container p:nth-child(1) {
   font-size: 56px;
   font-weight: bold;
   align-self: flex-start;
   margin-left: 50px;
+}
+@media (max-width: 768px) {
+  main .welcome-section .main-container p:nth-child(1) {
+    font-size: 38px;
+  }
+}
+@media (max-width: 425px) {
+  main .welcome-section .main-container p:nth-child(1) {
+    margin-left: 0;
+    font-size: 29px;
+  }
 }
 main .welcome-section .main-container p:nth-child(1)::after {
   content: "";
@@ -164,6 +229,11 @@ main .welcome-section .main-container p:nth-child(1)::after {
   height: 2px;
   background-color: #dadada;
 }
+@media (max-width: 425px) {
+  main .welcome-section .main-container p:nth-child(1)::after {
+    right: -80px;
+  }
+}
 main .welcome-section .main-container .about {
   color: #d4d4d4;
 }
@@ -173,12 +243,33 @@ main .welcome-section .main-container h1 {
   max-width: 600px;
   text-shadow: #fc0 1px 0 10px;
 }
+@media (max-width: 768px) {
+  main .welcome-section .main-container h1 {
+    max-width: 500px;
+  }
+}
+@media (max-width: 425px) {
+  main .welcome-section .main-container h1 {
+    max-width: 300px;
+    font-size: 32px;
+  }
+}
 main .welcome-section .main-container h1 span {
   text-transform: uppercase;
   font-size: 96px;
   font-weight: bold;
   color: #020289;
   text-shadow: 3px 3px 2px rgb(0, 136, 255), 10px 10px 1em blue;
+}
+@media (max-width: 768px) {
+  main .welcome-section .main-container h1 span {
+    font-size: 76px;
+  }
+}
+@media (max-width: 425px) {
+  main .welcome-section .main-container h1 span {
+    font-size: 48px;
+  }
 }
 main .welcome-section .side-bar-right {
   position: fixed;
@@ -190,6 +281,11 @@ main .welcome-section .side-bar-right {
   gap: 50px;
   top: 40%;
   right: 0;
+}
+@media (max-width: 768px) {
+  main .welcome-section .side-bar-right {
+    width: 50px;
+  }
 }
 main .welcome-section .side-bar-right .sbr {
   width: 20px;
@@ -224,9 +320,19 @@ main .skills-section {
   margin: 30px auto;
   gap: 50px;
 }
+@media (max-width: 425px) {
+  main .skills-section {
+    width: 80%;
+  }
+}
 main .skills-section h2 {
   align-self: start;
   font-size: 56px;
+}
+@media (max-width: 768px) {
+  main .skills-section h2 {
+    font-size: 38px;
+  }
 }
 main .skills-section .grid-container {
   display: grid;
@@ -235,8 +341,19 @@ main .skills-section .grid-container {
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 20px;
 }
+@media (max-width: 768px) {
+  main .skills-section .grid-container {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+@media (max-width: 425px) {
+  main .skills-section .grid-container {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
 main .skills-section .grid-container .grid-block {
   display: flex;
+  justify-content: center;
   border: #fff;
   background-color: #a2a2a2;
   border-radius: 10px;
@@ -249,6 +366,11 @@ main .skills-section .grid-container .grid-block .side-block {
 main .skills-section .grid-container .grid-block .description-block {
   padding: 20px;
 }
+@media (max-width: 425px) {
+  main .skills-section .grid-container .grid-block .description-block {
+    display: none;
+  }
+}
 main .skills-section .grid-container .grid-block .description-block .desc-header {
   margin-bottom: 10px;
 }
@@ -259,12 +381,18 @@ main .project-section {
   justify-content: center;
   width: 85%;
   margin: 30px auto;
-  gap: 50px;
+  gap: 10px;
   min-height: 100vh;
 }
 main .project-section h2 {
   font-size: 56px;
   align-self: start;
+  margin: 50px 0;
+}
+@media (max-width: 768px) {
+  main .project-section h2 {
+    font-size: 38px;
+  }
 }
 main .project-section .project-slider {
   display: flex;
@@ -288,6 +416,13 @@ main .project-section .slide-js {
   height: 400px;
   transition: transform 0.5s ease;
 }
+@media (max-width: 768px) {
+  main .project-section .slide-js {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
 main .project-section .slide-js .slider-img-js {
   border-radius: 20px;
   width: 65%;
@@ -297,15 +432,38 @@ main .project-section .slide-js .slider-img-js {
   background-position: center;
   transition: background-image 0.5s ease;
 }
+@media (max-width: 1024px) {
+  main .project-section .slide-js .slider-img-js {
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  main .project-section .slide-js .slider-img-js {
+    height: 240px;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
 main .project-section .slide-js .slider-text-box-js {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 35%;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  main .project-section .slide-js .slider-text-box-js {
+    width: 100%;
+  }
 }
 main .project-section .slide-js .slider-text-box-js h3 {
   margin-bottom: 20px;
   font-size: 42px;
+}
+@media (max-width: 1024px) {
+  main .project-section .slide-js .slider-text-box-js h3 {
+    font-size: 32px;
+  }
 }
 main .project-section .slide-js .slider-text-box-js ul .stack-box-js {
   list-style: none;
@@ -318,6 +476,12 @@ main .project-section .slide-js .slider-text-box-js ul li {
 main .project-section .slide-js .slider-text-box-js ul li img {
   width: 70px;
   height: 70px;
+}
+@media (max-width: 1024px) {
+  main .project-section .slide-js .slider-text-box-js ul li img {
+    width: 45px;
+    height: 45px;
+  }
 }
 main .project-section .slide-js .slider-text-box-js .button-more-js {
   display: flex;

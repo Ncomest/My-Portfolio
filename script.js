@@ -36,12 +36,21 @@ function showSlide(index) {
  const titleElement = document.querySelector(".slider-title-js");
  const iconsList = document.querySelector(".stack-box-js");
  const btnMore = document.querySelector(".button-more-js");
+ const windowWidth = window.innerWidth;
+ console.log(windowWidth);
 
  //  slideElement.style.opacity = 0;
  setTimeout(() => {
   imageElement.style.backgroundImage = slide.image;
   titleElement.innerText = slide.title;
-  slideElement.style.flexDirection = index % 2 === 0 ? "row" : "row-reverse";
+  slideElement.style.flexDirection =
+   index % 2 === 0
+    ? windowWidth <= 768
+      ? "column"
+      : "row"
+    : windowWidth <= 768
+    ? "column"
+    : "row-reverse";
 
   iconsList.innerHTML = "";
   slide.icons.forEach((icon) => {
@@ -73,5 +82,3 @@ function prevSlide() {
 }
 
 nextSlide();
-
-//Кнопка подробнее на слайдере
