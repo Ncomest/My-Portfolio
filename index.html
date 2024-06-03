@@ -183,7 +183,9 @@
    <div class="project-section">
     <h2>Проекты</h2>
     <div class="project-slider">
-     <button onclick="nextSlide()">toggle</button>
+     <div class="btn-arrow btn-next" onclick="prevSlide()">
+      <i class="bi bi-arrow-left-circle-fill"></i>
+     </div>
      <div class="slide-js">
       <div class="slider-img-js"></div>
       <div class="slider-text-box-js">
@@ -193,25 +195,14 @@
         laborum maiores consequuntur magni, inventore, animi consequatur quis
         quibusdam debitis nemo vitae maxime provident.
        </p>
-       <ul>
-        <li class="stack-js">
-         <img
-          width="70"
-          height="70"
-          src="https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4"
-          alt="external-react-social-media-tanah-basah-basic-outline-tanah-basah"
-         />
-        </li>
-        <li class="stack-js">
-         <img
-          width="70"
-          height="70"
-          src="https://img.icons8.com/?size=100&id=cHBUT9SmrD2V&format=png&color=d4d4d4"
-          alt="typescript"
-         />
-        </li>
-       </ul>
+       <ul class="stack-box-js"></ul>
+       <button class="button-more-js">
+        <i class="bi bi-github"></i>Подробнее...
+       </button>
       </div>
+     </div>
+     <div class="btn-arrow btn-prev" onclick="nextSlide()">
+      <i class="bi bi-arrow-right-circle-fill"></i>
      </div>
     </div>
    </div>
