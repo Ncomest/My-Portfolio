@@ -325,19 +325,19 @@ main .skills-section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 100px;
+  padding: 100px;
   gap: 50px;
 }
 @media (max-width: 768px) {
   main .skills-section {
     gap: 10px;
-    padding: 0 50px;
+    padding: 50px;
   }
 }
 @media (max-width: 425px) {
   main .skills-section {
     gap: 20px;
-    padding: 0 10px;
+    padding: 10px;
   }
 }
 main .skills-section h2 {
@@ -413,22 +413,21 @@ main .project-section {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 0 100px;
+  padding: 100px;
 }
 @media (max-width: 768px) {
   main .project-section {
-    padding: 0 50px;
+    padding: 50px;
   }
 }
 @media (max-width: 425px) {
   main .project-section {
-    padding: 0 10px;
+    padding: 20px 10px;
   }
 }
 main .project-section h2 {
   font-size: 56px;
   align-self: start;
-  margin: 50px 0;
 }
 @media (max-width: 768px) {
   main .project-section h2 {
@@ -443,13 +442,33 @@ main .project-section .project-slider {
   overflow: hidden;
   position: relative;
 }
-main .project-section .btn-arrow {
+main .project-section .project-slider .btn-arrow {
   cursor: pointer;
 }
-main .project-section .btn-arrow i {
+main .project-section .project-slider .btn-arrow i {
   font-size: 40px;
 }
-main .project-section .slide-js {
+main .project-section .project-slider .btn-prev {
+  position: absolute;
+  top: 42%;
+  left: 0;
+}
+@media (max-width: 425px) {
+  main .project-section .project-slider .btn-prev {
+    top: 42%;
+  }
+}
+main .project-section .project-slider .btn-next {
+  position: absolute;
+  top: 42%;
+  right: 0;
+}
+@media (max-width: 425px) {
+  main .project-section .project-slider .btn-next {
+    top: 42%;
+  }
+}
+main .project-section .project-slider .slide-js {
   display: flex;
   justify-content: space-around;
   gap: 20px;
@@ -458,13 +477,14 @@ main .project-section .slide-js {
   transition: transform 0.5s ease;
 }
 @media (max-width: 768px) {
-  main .project-section .slide-js {
+  main .project-section .project-slider .slide-js {
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 70px;
   }
 }
-main .project-section .slide-js .slider-img-js {
+main .project-section .project-slider .slide-js .slider-img-js {
   border-radius: 20px;
   width: 65%;
   max-width: 800px;
@@ -474,18 +494,18 @@ main .project-section .slide-js .slider-img-js {
   transition: background-image 0.5s ease;
 }
 @media (max-width: 1024px) {
-  main .project-section .slide-js .slider-img-js {
+  main .project-section .project-slider .slide-js .slider-img-js {
     height: 300px;
   }
 }
 @media (max-width: 768px) {
-  main .project-section .slide-js .slider-img-js {
+  main .project-section .project-slider .slide-js .slider-img-js {
     height: 240px;
     width: 100%;
     border-radius: 10px;
   }
 }
-main .project-section .slide-js .slider-text-box-js {
+main .project-section .project-slider .slide-js .slider-text-box-js {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -493,38 +513,38 @@ main .project-section .slide-js .slider-text-box-js {
   gap: 10px;
 }
 @media (max-width: 768px) {
-  main .project-section .slide-js .slider-text-box-js {
+  main .project-section .project-slider .slide-js .slider-text-box-js {
     width: 100%;
   }
 }
-main .project-section .slide-js .slider-text-box-js h3 {
+main .project-section .project-slider .slide-js .slider-text-box-js h3 {
   margin-bottom: 20px;
   font-size: 42px;
 }
 @media (max-width: 1024px) {
-  main .project-section .slide-js .slider-text-box-js h3 {
+  main .project-section .project-slider .slide-js .slider-text-box-js h3 {
     font-size: 32px;
   }
 }
-main .project-section .slide-js .slider-text-box-js ul .stack-box-js {
+main .project-section .project-slider .slide-js .slider-text-box-js ul .stack-box-js {
   list-style: none;
   padding: 0;
 }
-main .project-section .slide-js .slider-text-box-js ul li {
+main .project-section .project-slider .slide-js .slider-text-box-js ul li {
   display: inline-block;
   margin-right: 10px;
 }
-main .project-section .slide-js .slider-text-box-js ul li img {
+main .project-section .project-slider .slide-js .slider-text-box-js ul li img {
   width: 70px;
   height: 70px;
 }
 @media (max-width: 1024px) {
-  main .project-section .slide-js .slider-text-box-js ul li img {
+  main .project-section .project-slider .slide-js .slider-text-box-js ul li img {
     width: 45px;
     height: 45px;
   }
 }
-main .project-section .slide-js .slider-text-box-js .button-more-js {
+main .project-section .project-slider .slide-js .slider-text-box-js .button-more-js {
   display: flex;
   width: 150px;
   gap: 5px;
@@ -534,10 +554,10 @@ main .project-section .slide-js .slider-text-box-js .button-more-js {
   align-self: flex-end;
   background: linear-gradient(170deg, white, rgb(64, 64, 64));
 }
-main .project-section .slide-js .slider-text-box-js .button-more-js:hover {
+main .project-section .project-slider .slide-js .slider-text-box-js .button-more-js:hover {
   background: #e1e1e1;
 }
-main .project-section .slide-js .slider-text-box-js .button-more-js:active {
+main .project-section .project-slider .slide-js .slider-text-box-js .button-more-js:active {
   background-color: #5e5e5e;
   box-shadow: inset 0 0 5px rgb(0, 0, 0);
 }
