@@ -26,6 +26,11 @@ body::before {
   background: rgba(0, 0, 0, 0.9);
   z-index: -1;
 }
+@media (max-width: 768px) {
+  body::before {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
 
 header {
   border-radius: 5px;
@@ -51,7 +56,7 @@ header .burger {
     display: flex;
   }
   header .burger i {
-    display: block;
+    display: flex;
     align-self: center;
     font-size: 50px;
     color: #d4d4d4;
@@ -118,7 +123,7 @@ main {
   color: #d4d4d4;
 }
 main .welcome-section {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
 }
 main .welcome-section .side-bar-left {
@@ -133,8 +138,7 @@ main .welcome-section .side-bar-left {
 }
 @media (max-width: 425px) {
   main .welcome-section .side-bar-left {
-    width: 50px;
-    gap: 20px;
+    display: none;
   }
 }
 main .welcome-section .side-bar-left .sbl {
@@ -183,30 +187,27 @@ main .welcome-section .side-bar-left .sbl i {
 }
 main .welcome-section .main-container {
   width: 100%;
-  align-items: center;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   flex-direction: column;
-  gap: 150px;
-  margin-bottom: 150px;
+  margin-right: 100px;
   color: #d4d4d4;
 }
 @media (max-width: 768px) {
   main .welcome-section .main-container {
-    gap: 100px;
+    margin-right: 50px;
   }
 }
 @media (max-width: 425px) {
   main .welcome-section .main-container {
     max-width: 300px;
-    margin-left: 20px;
+    margin: 0 auto;
   }
 }
 main .welcome-section .main-container p:nth-child(1) {
   font-size: 56px;
   font-weight: bold;
-  align-self: flex-start;
-  margin-left: 50px;
 }
 @media (max-width: 768px) {
   main .welcome-section .main-container p:nth-child(1) {
@@ -215,7 +216,6 @@ main .welcome-section .main-container p:nth-child(1) {
 }
 @media (max-width: 425px) {
   main .welcome-section .main-container p:nth-child(1) {
-    margin-left: 0;
     font-size: 29px;
   }
 }
@@ -287,6 +287,11 @@ main .welcome-section .side-bar-right {
     width: 50px;
   }
 }
+@media (max-width: 425px) {
+  main .welcome-section .side-bar-right {
+    display: none;
+  }
+}
 main .welcome-section .side-bar-right .sbr {
   width: 20px;
   height: 20px;
@@ -316,13 +321,13 @@ main .skills-section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 85%;
-  margin: 30px auto;
+  padding: 0 100px;
   gap: 50px;
 }
 @media (max-width: 425px) {
   main .skills-section {
-    width: 80%;
+    gap: 20px;
+    padding: 0 10px;
   }
 }
 main .skills-section h2 {
@@ -382,7 +387,6 @@ main .project-section {
   width: 85%;
   margin: 30px auto;
   gap: 10px;
-  min-height: 100vh;
 }
 main .project-section h2 {
   font-size: 56px;
