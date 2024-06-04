@@ -328,6 +328,12 @@ main .skills-section {
   padding: 0 100px;
   gap: 50px;
 }
+@media (max-width: 768px) {
+  main .skills-section {
+    gap: 10px;
+    padding: 0 50px;
+  }
+}
 @media (max-width: 425px) {
   main .skills-section {
     gap: 20px;
@@ -353,7 +359,7 @@ main .skills-section .grid-container {
 }
 @media (max-width: 768px) {
   main .skills-section .grid-container {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
   }
 }
 @media (max-width: 425px) {
@@ -363,6 +369,8 @@ main .skills-section .grid-container {
   }
 }
 main .skills-section .grid-container .grid-block {
+  padding: 20px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,12 +383,9 @@ main .skills-section .grid-container .grid-block {
 main .skills-section .grid-container .grid-block .side-block {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
 }
 @media (max-width: 425px) {
   main .skills-section .grid-container .grid-block .side-block {
-    padding: 10px;
     gap: 10px;
     align-self: center;
   }
@@ -389,17 +394,13 @@ main .skills-section .grid-container .grid-block .side-block img {
   width: 90px;
   height: 90px;
 }
-main .skills-section .grid-container .grid-block .side-block .desc-header {
-  font-size: 34px;
-  margin-bottom: 10px;
+main .skills-section .grid-container .grid-block .desc-header {
+  font-size: 24px;
 }
 @media (max-width: 425px) {
-  main .skills-section .grid-container .grid-block .side-block .desc-header {
+  main .skills-section .grid-container .grid-block .desc-header {
     display: none;
   }
-}
-main .skills-section .grid-container .grid-block .description-block {
-  padding: 20px;
 }
 @media (max-width: 425px) {
   main .skills-section .grid-container .grid-block .description-block {
@@ -411,9 +412,18 @@ main .project-section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 85%;
-  margin: 30px auto;
   gap: 10px;
+  padding: 0 100px;
+}
+@media (max-width: 768px) {
+  main .project-section {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 425px) {
+  main .project-section {
+    padding: 0 10px;
+  }
 }
 main .project-section h2 {
   font-size: 56px;

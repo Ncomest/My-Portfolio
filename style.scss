@@ -339,6 +339,10 @@ main {
   padding: 0 100px;
   gap: 50px;
 
+  @media (max-width: 768px) {
+   gap: 10px;
+   padding: 0 50px;
+  }
   @media (max-width: 425px) {
    gap: 20px;
    padding: 0 10px;
@@ -360,7 +364,7 @@ main {
    grid-template-columns: repeat(3, minmax(100px, 1fr));
    gap: 20px;
    @media (max-width: 768px) {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
    }
 
    @media (max-width: 425px) {
@@ -369,6 +373,8 @@ main {
    }
 
    .grid-block {
+    padding: 20px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -381,10 +387,7 @@ main {
     .side-block {
      display: flex;
      align-items: center;
-     gap: 20px;
-     padding: 20px;
      @media (max-width: 425px) {
-      padding: 10px;
       gap: 10px;
       align-self: center;
      }
@@ -392,17 +395,15 @@ main {
       width: 90px;
       height: 90px;
      }
-     .desc-header {
-      font-size: 34px;
-      margin-bottom: 10px;
-      @media (max-width: 425px) {
-       display: none;
-      }
+    }
+    .desc-header {
+     font-size: 24px;
+     @media (max-width: 425px) {
+      display: none;
      }
     }
 
     .description-block {
-     padding: 20px;
      @media (max-width: 425px) {
       display: none;
      }
@@ -416,9 +417,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 85%;
-  margin: 30px auto;
   gap: 10px;
+  padding: 0 100px;
+  @media (max-width: 768px) {
+   padding: 0 50px;
+  }
+  @media (max-width: 425px) {
+   padding: 0 10px;
+  }
   // min-height: 100vh;
 
   h2 {
