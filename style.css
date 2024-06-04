@@ -246,6 +246,7 @@ main .welcome-section .main-container h1 {
 @media (max-width: 768px) {
   main .welcome-section .main-container h1 {
     max-width: 500px;
+    font-size: 44px;
   }
 }
 @media (max-width: 425px) {
@@ -258,12 +259,13 @@ main .welcome-section .main-container h1 span {
   text-transform: uppercase;
   font-size: 96px;
   font-weight: bold;
+  font-size: 60px;
   color: #020289;
   text-shadow: 3px 3px 2px rgb(0, 136, 255), 10px 10px 1em blue;
 }
 @media (max-width: 768px) {
   main .welcome-section .main-container h1 span {
-    font-size: 76px;
+    font-size: 54px;
   }
 }
 @media (max-width: 425px) {
@@ -340,6 +342,7 @@ main .skills-section h2 {
   }
 }
 main .skills-section .grid-container {
+  width: 100%;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -354,6 +357,7 @@ main .skills-section .grid-container {
 @media (max-width: 425px) {
   main .skills-section .grid-container {
     grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 10px;
   }
 }
 main .skills-section .grid-container .grid-block {
@@ -367,6 +371,17 @@ main .skills-section .grid-container .grid-block {
 }
 main .skills-section .grid-container .grid-block .side-block {
   padding: 20px;
+}
+@media (max-width: 425px) {
+  main .skills-section .grid-container .grid-block .side-block {
+    padding: 10px;
+  }
+}
+@media (max-width: 425px) {
+  main .skills-section .grid-container .grid-block .side-block img {
+    width: 90px;
+    height: 90px;
+  }
 }
 main .skills-section .grid-container .grid-block .description-block {
   padding: 20px;
