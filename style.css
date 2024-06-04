@@ -123,7 +123,7 @@ main {
   color: #d4d4d4;
 }
 main .welcome-section {
-  min-height: 100dvh;
+  min-height: 100lvh;
   display: flex;
 }
 main .welcome-section .side-bar-left {
@@ -189,9 +189,10 @@ main .welcome-section .main-container {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   margin-right: 100px;
+  gap: 150px;
   color: #d4d4d4;
 }
 @media (max-width: 768px) {
@@ -203,6 +204,7 @@ main .welcome-section .main-container {
   main .welcome-section .main-container {
     max-width: 300px;
     margin: 0 auto;
+    gap: 80px;
   }
 }
 main .welcome-section .main-container p:nth-child(1) {
@@ -362,6 +364,7 @@ main .skills-section .grid-container {
 }
 main .skills-section .grid-container .grid-block {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: #fff;
   background-color: #a2a2a2;
@@ -370,17 +373,29 @@ main .skills-section .grid-container .grid-block {
   background-color: rgba(44, 43, 43, 0.2078431373);
 }
 main .skills-section .grid-container .grid-block .side-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   padding: 20px;
 }
 @media (max-width: 425px) {
   main .skills-section .grid-container .grid-block .side-block {
     padding: 10px;
+    gap: 10px;
+    align-self: center;
   }
 }
+main .skills-section .grid-container .grid-block .side-block img {
+  width: 90px;
+  height: 90px;
+}
+main .skills-section .grid-container .grid-block .side-block .desc-header {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
 @media (max-width: 425px) {
-  main .skills-section .grid-container .grid-block .side-block img {
-    width: 90px;
-    height: 90px;
+  main .skills-section .grid-container .grid-block .side-block .desc-header {
+    display: none;
   }
 }
 main .skills-section .grid-container .grid-block .description-block {
@@ -390,9 +405,6 @@ main .skills-section .grid-container .grid-block .description-block {
   main .skills-section .grid-container .grid-block .description-block {
     display: none;
   }
-}
-main .skills-section .grid-container .grid-block .description-block .desc-header {
-  margin-bottom: 10px;
 }
 main .project-section {
   display: flex;
