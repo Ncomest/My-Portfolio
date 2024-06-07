@@ -167,7 +167,7 @@ main {
   color: #d4d4d4;
 }
 main .welcome-section {
-  min-height: 100lvh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
