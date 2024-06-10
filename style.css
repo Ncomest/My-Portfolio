@@ -111,7 +111,7 @@ header nav ul a {
   font-size: 22px;
 }
 header nav ul a:hover {
-  color: #0a0097;
+  color: #1000ee;
 }
 header nav button {
   display: -webkit-box;
@@ -167,7 +167,7 @@ main {
   color: #d4d4d4;
 }
 main .welcome-section {
-  min-height: 100lvh;
+  min-height: 100svh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,8 +470,8 @@ main .skills-section .grid-container {
 }
 @media (max-width: 425px) {
   main .skills-section .grid-container {
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 20px;
   }
 }
 main .skills-section .grid-container .grid-block {
@@ -519,11 +519,13 @@ main .skills-section .grid-container .grid-block .side-block img {
 }
 main .skills-section .grid-container .grid-block .desc-header {
   font-size: 24px;
-  color: #0a0097;
+  color: #1000ee;
 }
 @media (max-width: 425px) {
   main .skills-section .grid-container .grid-block .desc-header {
-    display: none;
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 20px;
   }
 }
 @media (max-width: 425px) {
@@ -886,5 +888,5 @@ footer nav ul a {
   font-size: 22px;
 }
 footer nav ul a:hover {
-  color: #0a0097;
+  color: #1000ee;
 }
