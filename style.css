@@ -167,7 +167,11 @@ main {
   color: #d4d4d4;
 }
 main .welcome-section {
+<<<<<<< HEAD
   min-height: 100svh;
+=======
+  min-height: 100vh;
+>>>>>>> 7f6c0a1b258f3f813182595e86335e2e91622962
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,5 +892,10 @@ footer nav ul a {
   font-size: 22px;
 }
 footer nav ul a:hover {
+<<<<<<< HEAD
   color: #1000ee;
 }
+=======
+  color: #0a0097;
+}
+>>>>>>> 7f6c0a1b258f3f813182595e86335e2e91622962
