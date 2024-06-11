@@ -48,6 +48,7 @@ header {
   border: 1px solid #a2a2a2;
   background-color: rgba(44, 43, 43, 0.2078431373);
   z-index: 1;
+  margin-bottom: 20px;
 }
 @media (max-width: 768px) {
   header {
@@ -188,8 +189,6 @@ main .welcome-section .side-bar-left {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 50px;
-  top: 30%;
-  left: 50px;
 }
 @media (max-width: 425px) {
   main .welcome-section .side-bar-left {
@@ -368,8 +367,15 @@ main .welcome-section .side-bar-right {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 50px;
-  top: 40%;
-  right: 0;
+  right: -20px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (max-width: 992px) {
+  main .welcome-section .side-bar-right {
+    width: 50px;
+  }
 }
 @media (max-width: 768px) {
   main .welcome-section .side-bar-right {
