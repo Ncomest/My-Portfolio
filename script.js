@@ -1,3 +1,4 @@
+//-- Данные для слайдера
 const slides = [
  {
   web: "https://ncomest.github.io/Landing-market/",
@@ -23,9 +24,11 @@ const slides = [
  },
 ];
 
+//-- Для слайдера
 let curSlide = 0;
 let isTransition = false;
 
+//-- Функция для слайдера
 function showSlide(index) {
  if (isTransition) return;
 
@@ -39,7 +42,6 @@ function showSlide(index) {
  const windowWidth = window.innerWidth;
  console.log(windowWidth);
 
- //  slideElement.style.opacity = 0;
  setTimeout(() => {
   imageElement.style.backgroundImage = slide.image;
   titleElement.innerText = slide.title;
@@ -65,20 +67,71 @@ function showSlide(index) {
   btnMore.onclick = () => {
    window.open(slide.web, "_blank");
   };
-  // slideElement.style.opacity = 1;
 
   setTimeout(() => (isTransition = false), 500);
  }, 0);
 }
 
+//-- Следующий слайд
 function nextSlide() {
  curSlide = (curSlide + 1) % slides.length;
  showSlide(curSlide);
 }
 
+//-- Предыдущий слайд
 function prevSlide() {
  curSlide = (curSlide - 1 + slides.length) % slides.length;
  showSlide(curSlide);
 }
 
+//-- Запуск функции
 nextSlide();
+
+//-- Шарики справа экрана
+document.addEventListener("DOMContentLoaded", function () {
+ const sections = {
+  ball1: document.getElementById("welcome-section"),
+  ball2: document.getElementById("skills-section"),
+  ball3: document.getElementById("project-section"),
+  ball4: document.getElementById("contact-section"),
+ };
+
+ const balls = {
+  ball1: document.getElementById("ball1-js"),
+  ball2: document.getElementById("ball2-js"),
+  ball3: document.getElementById("ball3-js"),
+  ball4: document.getElementById("ball4-js"),
+ };
+
+ window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+  for (const ball in sections) {
+   const section = sections[ball];
+   if (
+    section.offsetTop <= scrollPosition &&
+    section.offsetTop + section.offsetHeight > scrollPosition
+   ) {
+    balls[ball].classList.add("active");
+   } else {
+    balls[ball].classList.remove("active");
+   }
+  }
+ });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+ const burgerMenu = document.getElementById("burgerMenu");
+ let lastScrollY = window.scrollY;
+
+ window.addEventListener("scroll", function () {
+  if (window.scrollY > lastScrollY && window.scrollY > 50) {
+   // Прокручиваем вниз и прокрутили достаточно, чтобы скрыть бургер
+   burgerMenu.classList.add("hidden");
+  } else {
+   // Прокручиваем вверх или вверху страницы, показываем бургер
+   burgerMenu.classList.remove("hidden");
+  }
+  lastScrollY = window.scrollY;
+ });
+});
