@@ -253,21 +253,54 @@ main {
    width: 100%;
    display: flex;
    align-items: center;
-   justify-content: center;
+  //  justify-content: space-evenly;
    flex-direction: column;
    margin-right: 100px;
-   gap: 150px;
+   gap: 130px;
+   color: $text-color-white;
+
    @media (max-width: 768px) {
     margin-right: 50px;
+    margin-top: 5%;
+    justify-content: start;
+    gap: 90px;
+    
    }
    @media (max-width: 425px) {
     max-width: 300px;
     margin: 0 auto;
-    margin-top: 30%;
+    margin-top: 10%;
     justify-content: start;
+    gap: 90px;
    }
 
-   color: $text-color-white;
+   .romb {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border-width: 4px 4px 0 0; /* Толщина границы: снизу 2px, справа 2px, сверху 0, слева 0 */
+    border-style: solid; /* Стиль границы: сплошная */
+    border-color: blue; /* Цвет границы: синий */
+    transform: rotate(135deg);
+    box-shadow: inset -4px 4px 10px 10px teal;
+
+    .romb-inner {
+     width: 70px;
+     height: 70px;
+     position: absolute;
+     transform: translate(-50%, -50%);
+     top: 50%;
+     left: -25%;
+     border-radius: 10px;
+     border-width: 4px 4px 0 0;
+     border-style: solid;
+     border-color: blue;
+     transform: rotate(0deg);
+     box-shadow: inset -4px 4px 10px 10px teal;
+    }
+   }
+
    p:nth-child(1) {
     font-size: 56px;
     font-weight: bold;
@@ -643,12 +676,11 @@ main {
    gap: 20px;
    max-width: 500px;
    width: 100%;
+
    .input-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    label {
-    }
 
     input {
      padding: 10px;
@@ -672,6 +704,7 @@ main {
      }
     }
    }
+
    button {
     border: 1px solid #a2a2a2;
     background: linear-gradient(170deg, white, rgb(64, 64, 64));

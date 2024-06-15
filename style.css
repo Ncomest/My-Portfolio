@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 * {
   margin: 0;
@@ -302,31 +303,64 @@ main .welcome-section .main-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 100px;
-  gap: 150px;
+  gap: 130px;
   color: #d4d4d4;
 }
 @media (max-width: 768px) {
   main .welcome-section .main-container {
     margin-right: 50px;
+    margin-top: 5%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 90px;
   }
 }
 @media (max-width: 425px) {
   main .welcome-section .main-container {
     max-width: 300px;
     margin: 0 auto;
-    margin-top: 30%;
+    margin-top: 10%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    gap: 90px;
   }
+}
+main .welcome-section .main-container .romb {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border-width: 4px 4px 0 0; /* Толщина границы: снизу 2px, справа 2px, сверху 0, слева 0 */
+  border-style: solid; /* Стиль границы: сплошная */
+  border-color: blue; /* Цвет границы: синий */
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-box-shadow: inset -4px 4px 10px 10px teal;
+          box-shadow: inset -4px 4px 10px 10px teal;
+}
+main .welcome-section .main-container .romb .romb-inner {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: -25%;
+  border-radius: 10px;
+  border-width: 4px 4px 0 0;
+  border-style: solid;
+  border-color: blue;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-box-shadow: inset -4px 4px 10px 10px teal;
+          box-shadow: inset -4px 4px 10px 10px teal;
 }
 main .welcome-section .main-container p:nth-child(1) {
   font-size: 56px;
