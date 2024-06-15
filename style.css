@@ -255,6 +255,7 @@ header div ul li {
 header div ul li a {
   text-decoration: none;
   color: #d4d4d4;
+  font-size: 24px;
 }
 header div .btn-contact {
   display: -webkit-box;
@@ -266,9 +267,10 @@ header div .btn-contact {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 10px;
   border-radius: 5px;
   border: 1px solid #a2a2a2;
-  padding: 2px 5px;
+  padding: 10px 15px;
   background: linear-gradient(170deg, white, rgb(64, 64, 64));
   -webkit-box-shadow: inset 2px 2px 2px 0 #fff;
           box-shadow: inset 2px 2px 2px 0 #fff;

@@ -220,6 +220,7 @@ header {
     a {
      text-decoration: none;
      color: $text-color-white;
+     font-size: 24px;
     }
    }
   }
@@ -228,9 +229,10 @@ header {
    display: flex;
    align-items: center;
    justify-content: center;
+   gap: 10px;
    border-radius: 5px;
    border: 1px solid $bg-color-grey;
-   padding: 2px 5px;
+   padding: 10px 15px;
    background: linear-gradient(170deg, white, rgb(64, 64, 64));
    box-shadow: inset 2px 2px 2px 0 #fff;
    text-decoration: none;
