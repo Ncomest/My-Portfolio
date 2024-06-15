@@ -324,7 +324,7 @@ main .welcome-section .main-container {
   main .welcome-section .main-container {
     max-width: 300px;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 20%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
