@@ -318,7 +318,6 @@ main .welcome-section .main-container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    gap: 90px;
   }
 }
 @media (max-width: 425px) {
@@ -329,7 +328,6 @@ main .welcome-section .main-container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    gap: 90px;
   }
 }
 main .welcome-section .main-container .romb {

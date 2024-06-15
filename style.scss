@@ -253,7 +253,7 @@ main {
    width: 100%;
    display: flex;
    align-items: center;
-  //  justify-content: space-evenly;
+   //  justify-content: space-evenly;
    flex-direction: column;
    margin-right: 100px;
    gap: 130px;
@@ -263,15 +263,14 @@ main {
     margin-right: 50px;
     margin-top: 5%;
     justify-content: start;
-    gap: 90px;
-    
+    // gap: 90px;
    }
    @media (max-width: 425px) {
     max-width: 300px;
     margin: 0 auto;
     margin-top: 10%;
     justify-content: start;
-    gap: 90px;
+    // gap: 120px;
    }
 
    .romb {
