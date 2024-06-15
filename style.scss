@@ -32,25 +32,24 @@ body {
  position: relative;
  padding: 10px;
  background-color: $bg-color-dark;
- overflow-x: hidden; /* предотвращает горизонтальную прокрутку */
+ overflow-x: hidden;
  margin: 0;
 
- /* убираем фоновое изображение из body */
  background: none;
 }
 
 body::before {
  content: "";
- position: fixed; /* фиксированное положение псевдоэлемента */
+ position: fixed;
  top: 0;
  left: 0;
- width: 100vw; /* полная ширина окна просмотра */
- height: 100vh; /* полная высота окна просмотра */
+ width: 100vw;
+ height: 100vh;
  background: url("image/texture.jpg");
  background-size: cover;
  background-position: center;
- z-index: -2; /* размещение псевдоэлемента за контентом */
- pointer-events: none; /* исключает взаимодействие с псевдоэлементом */
+ z-index: -2;
+ pointer-events: none;
 }
 
 body::after {
@@ -58,19 +57,14 @@ body::after {
  position: fixed;
  top: 0;
  left: 0;
- width: 100vw; /* полная ширина окна просмотра */
- height: 100vh; /* полная высота окна просмотра */
- background: rgba(0, 0, 0, 0.9); /* затемнение */
- z-index: -1; /* размещение затемнения перед фоновым изображением, но за контентом */
- pointer-events: none; /* исключает взаимодействие с псевдоэлементом */
+ width: 100vw;
+ height: 100vh;
+ background: rgba(0, 0, 0, 0.7);
+ pointer-events: none;
+ z-index: -1;
 
  @media (max-width: 768px) {
-  background: rgba(
-   0,
-   0,
-   0,
-   0.7
-  ); /* менее интенсивное затемнение на мобильных устройствах */
+  background: rgba(0, 0, 0, 0.5);
  }
 }
 
@@ -155,7 +149,8 @@ header {
     }
    }
   }
-  button {
+
+  .btn-contact {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -166,8 +161,10 @@ header {
    background: linear-gradient(170deg, white, rgb(64, 64, 64));
    box-shadow: inset 2px 2px 2px 0 #fff;
    text-decoration: none;
+   color: $text-color-black;
    font-size: $fontS-l;
    cursor: pointer;
+
    &:hover {
     background: $bg-button-hover;
    }

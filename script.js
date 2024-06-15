@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
  });
 });
 
+//-- Burger появление и скрытие
 document.addEventListener("DOMContentLoaded", function () {
  const burgerMenu = document.getElementById("burgerMenu");
  let lastScrollY = window.scrollY;
@@ -135,3 +136,26 @@ document.addEventListener("DOMContentLoaded", function () {
   lastScrollY = window.scrollY;
  });
 });
+
+//-- Отправка сообщения на почту hurtik.igor@gmail.com через emailjs.com (рег на eledan почте)
+function sendMail() {
+ const params = {
+  name: document.getElementById("name").value,
+  email: document.getElementById("email").value,
+  message: document.getElementById("message").value,
+ };
+
+ const serviceID = "service_u8rzbgx";
+ const templateID = "template_0ihfdi9";
+
+ emailjs
+  .send(serviceID, templateID, params)
+  .then((res) => {
+   document.getElementById("name").value = "";
+   document.getElementById("email").value = "";
+   document.getElementById("message").value = "";
+   console.log(res);
+   alert("your message sent succes");
+  })
+  .catch((err) => console.log(err));
+}

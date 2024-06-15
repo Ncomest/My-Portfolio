@@ -9,6 +9,17 @@
    rel="stylesheet"
    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
   />
+  <script
+   type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+   (function () {
+    emailjs.init({
+     publicKey: "qQb0qx1Ko_aW8B-g-",
+    });
+   })();
+  </script>
  </head>
  <body>
   <header>
@@ -18,9 +29,9 @@
      <li><a href="#skills-section">Навыки</a></li>
      <li><a href="#project-section">Проекты</a></li>
     </ul>
-    <button href="#contact-section">
-     <i class="bi bi-person-lines-fill"></i> Связь со мной
-    </button>
+    <a class="btn-contact" href="#contact-section">
+     <i class="bi bi-person-lines-fill"> </i> Связь со мной
+    </a>
    </nav>
    <div class="burger" id="burgerMenu"><i class="bi bi-list"></i></div>
   </header>
@@ -213,34 +224,24 @@
     <h2>Контакт со мной</h2>
     <form class="contact-container">
      <div class="input-container">
-      <label for="contact-name">Имя*</label>
-      <input
-       type="text"
-       id="contact-name"
-       placeholder="Введите ваше имя"
-       required
-      />
+      <label for="name">Имя*</label>
+      <input type="text" id="name" placeholder="Введите ваше имя" required />
      </div>
      <div class="input-container">
-      <label for="contact-email">Емейл*</label>
-      <input
-       type="email"
-       id="contact-email"
-       placeholder="Введите ваш емейл"
-       required
-      />
+      <label for="email">Емейл*</label>
+      <input type="email" id="email" placeholder="Введите ваш емейл" required />
      </div>
      <div class="input-container">
-      <label for="contact-textarea">Сообщение*</label>
+      <label for="message">Сообщение*</label>
       <textarea
-       id="contact-textarea"
+       id="message"
        cols="10"
        rows="10"
        placeholder="Введите ваше сообщение"
        required
       ></textarea>
      </div>
-     <button type="submit">отправить</button>
+     <button id="contact-submit" onclick="sendMail()">отправить</button>
     </form>
    </div>
   </main>
@@ -256,7 +257,6 @@
     </ul>
    </nav>
   </footer>
-
   <script src="script.js"></script>
  </body>
 </html>
