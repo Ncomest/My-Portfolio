@@ -15,8 +15,15 @@ const slides = [
   web: "https://wtube.vercel.app",
   image: "url(image/project2.png)",
   title: "WTube - база данных фильмов",
-  text:
-   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda laborum maiores consequuntur magni, inventore, animi consequatur quis quibusdam debitis nemo vitae maxime provident.",
+  text: `- Использование хуков (useState, useEffect, useRef, useContext)
+  - Адаптивная верстка с использованием Flex и Grid
+  - Применение React Router для навигации между страницами
+  - Асинхронные запросы API
+  - Создание формы входа и регистрации, личный кабинет пользователя
+  - Реализация переключения языков
+  - Сохранение данных в Local и Session Storage
+  - Внедрение слайдера и карусели с использованием React - библиотеки
+  - Реализация поиска,сортировки и фильтрация карточек фильмов`,
   icons: [
    "https://img.icons8.com/?size=100&id=A6r5yddU9uA0&format=png&color=d4d4d4",
    "https://img.icons8.com/?size=100&id=23028&format=png&color=d4d4d4",
@@ -170,16 +177,16 @@ document.getElementById("burgerMenu").addEventListener("click", function () {
 
 // Функция для закрытия меню
 function closeMenu() {
-  var navbarMobile = document.getElementById('navbarMobile');
-  var body = document.body;
-  navbarMobile.classList.remove('active');
-  body.classList.remove('no-scroll');
+ var navbarMobile = document.getElementById("navbarMobile");
+ var body = document.body;
+ navbarMobile.classList.remove("active");
+ body.classList.remove("no-scroll");
 }
 
 // Добавляем обработчики событий на элементы меню
-var menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach(function(item) {
-  item.addEventListener('click', function() {
-      closeMenu();
-  });
+var menuItems = document.querySelectorAll(".menu-item");
+menuItems.forEach(function (item) {
+ item.addEventListener("click", function () {
+  closeMenu();
+ });
 });

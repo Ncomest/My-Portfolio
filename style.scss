@@ -64,12 +64,12 @@ body::after {
  left: 0;
  width: 100vw;
  height: 100vh;
- background: rgba(0, 0, 0, 0.7);
+ background: rgba(0, 0, 0, 0.9);
  pointer-events: none;
  z-index: -1;
 
  @media (max-width: 768px) {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
  }
 }
 
@@ -301,7 +301,7 @@ main {
     }
 
     a {
-      text-decoration: none;
+     text-decoration: none;
      i {
       font-size: 40px;
       display: flex;
@@ -543,11 +543,12 @@ main {
     }
     .desc-header {
      font-size: 24px;
-     color: $text-color-blue;
+     color: $text-color-white;
+     font-weight: bold;
+
      @media (max-width: 425px) {
       align-self: center;
       font-size: 20px;
-      font-weight: bold;
      }
     }
 
