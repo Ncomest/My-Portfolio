@@ -19,6 +19,10 @@ body {
   background: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -74,45 +78,6 @@ header {
     background-color: transparent;
     position: fixed;
     right: 0;
-  }
-}
-header .burger {
-  display: none;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  height: 60px;
-  width: 60px;
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-header .burger i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  font-size: 50px;
-  color: #d4d4d4;
-}
-@media (max-width: 768px) {
-  header .burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 header .hidden {
@@ -203,6 +168,114 @@ header nav .btn-contact i {
           justify-content: center;
   margin-right: 10px;
   font-size: 20px;
+}
+header .burger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 60px;
+  width: 60px;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+header .burger i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 50px;
+  color: #d4d4d4;
+}
+@media (max-width: 768px) {
+  header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+header .navbar-mobile {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(24, 24, 24, 0.9647058824);
+  -webkit-transition: right 0.3s ease;
+  transition: right 0.3s ease;
+}
+header .active {
+  right: 0;
+}
+header div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+}
+header div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+header div ul li {
+  list-style: none;
+}
+header div ul li a {
+  text-decoration: none;
+  color: #d4d4d4;
+}
+header div .btn-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #a2a2a2;
+  padding: 2px 5px;
+  background: linear-gradient(170deg, white, rgb(64, 64, 64));
+  -webkit-box-shadow: inset 2px 2px 2px 0 #fff;
+          box-shadow: inset 2px 2px 2px 0 #fff;
+  text-decoration: none;
+  color: #2e2e2e;
+  font-size: 22px;
+  margin-top: auto;
 }
 
 main {

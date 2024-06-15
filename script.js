@@ -159,3 +159,27 @@ function sendMail() {
   })
   .catch((err) => console.log(err));
 }
+
+//-- Меню справа с navbar
+document.getElementById("burgerMenu").addEventListener("click", function () {
+ let navbarMobile = document.getElementById("navbarMobile");
+ let body = document.body;
+ navbarMobile.classList.toggle("active");
+ body.classList.toggle("no-scroll");
+});
+
+// Функция для закрытия меню
+function closeMenu() {
+  var navbarMobile = document.getElementById('navbarMobile');
+  var body = document.body;
+  navbarMobile.classList.remove('active');
+  body.classList.remove('no-scroll');
+}
+
+// Добавляем обработчики событий на элементы меню
+var menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+      closeMenu();
+  });
+});
