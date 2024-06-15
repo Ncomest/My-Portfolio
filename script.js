@@ -5,7 +5,7 @@ const slides = [
   image: `url("image/project1.png")`,
   title: "Landing page",
   text:
-   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda laborum maiores consequuntur magni, inventore, animi consequatur quis quibusdam debitis nemo vitae maxime provident.",
+   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, officia magni earum aliquid temporibus tempore, molestias nisi minus deleniti sed laudantium facilis delectus harum! Unde culpa itaque deserunt iusto assumenda.",
   icons: [
    "https://img.icons8.com/?size=100&id=cHBUT9SmrD2V&format=png&color=d4d4d4",
    "https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4",
@@ -15,15 +15,8 @@ const slides = [
   web: "https://wtube.vercel.app",
   image: "url(image/project2.png)",
   title: "WTube - база данных фильмов",
-  text: `- Использование хуков (useState, useEffect, useRef, useContext)
-  - Адаптивная верстка с использованием Flex и Grid
-  - Применение React Router для навигации между страницами
-  - Асинхронные запросы API
-  - Создание формы входа и регистрации, личный кабинет пользователя
-  - Реализация переключения языков
-  - Сохранение данных в Local и Session Storage
-  - Внедрение слайдера и карусели с использованием React - библиотеки
-  - Реализация поиска,сортировки и фильтрация карточек фильмов`,
+  text:
+   "База данных фильмов на которой можно найти свой любимый фильм и узнать о нем больше, посмотреть актеров, описание фильма , найти похожии и рекомендуемые фильмы. Посмотреть отзывы других людей",
   icons: [
    "https://img.icons8.com/?size=100&id=A6r5yddU9uA0&format=png&color=d4d4d4",
    "https://img.icons8.com/?size=100&id=23028&format=png&color=d4d4d4",
@@ -44,6 +37,7 @@ function showSlide(index) {
  const slideElement = document.querySelector(".slide-js");
  const imageElement = document.querySelector(".slider-img-js");
  const titleElement = document.querySelector(".slider-title-js");
+ const descrElement = document.querySelector(".slider-description-js");
  const iconsList = document.querySelector(".stack-box-js");
  const btnMore = document.querySelector(".button-more-js");
  const windowWidth = window.innerWidth;
@@ -52,6 +46,7 @@ function showSlide(index) {
  setTimeout(() => {
   imageElement.style.backgroundImage = slide.image;
   titleElement.innerText = slide.title;
+  descrElement.innerText = slide.text;
   slideElement.style.flexDirection =
    index % 2 === 0
     ? windowWidth <= 768
@@ -145,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //-- Отправка сообщения на почту hurtik.igor@gmail.com через emailjs.com (рег на eledan почте)
-function sendMail() {
+function sendMail(event) {
+ event.preventDefault();
  const params = {
   name: document.getElementById("name").value,
   email: document.getElementById("email").value,
@@ -162,9 +158,11 @@ function sendMail() {
    document.getElementById("email").value = "";
    document.getElementById("message").value = "";
    console.log(res);
-   alert("your message sent succes");
+   alert("your message sent success");
+   console.log("Успешно");
   })
-  .catch((err) => console.log(err));
+  .catch((err) => console.log(err, "не успешно"));
+ console.log("запущена функция отправки");
 }
 
 //-- Меню справа с navbar
@@ -175,7 +173,7 @@ document.getElementById("burgerMenu").addEventListener("click", function () {
  body.classList.toggle("no-scroll");
 });
 
-// Функция для закрытия меню
+//-- Функция для закрытия меню
 function closeMenu() {
  var navbarMobile = document.getElementById("navbarMobile");
  var body = document.body;
@@ -183,8 +181,8 @@ function closeMenu() {
  body.classList.remove("no-scroll");
 }
 
-// Добавляем обработчики событий на элементы меню
-var menuItems = document.querySelectorAll(".menu-item");
+//-- Добавляем обработчики событий на элементы меню
+const menuItems = document.querySelectorAll(".menu-item");
 menuItems.forEach(function (item) {
  item.addEventListener("click", function () {
   closeMenu();

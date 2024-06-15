@@ -228,11 +228,7 @@
       <div class="slider-img-js"></div>
       <div class="slider-text-box-js">
        <h3 class="slider-title-js"></h3>
-       <p class="slider-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        laborum maiores consequuntur magni, inventore, animi consequatur quis
-        quibusdam debitis nemo vitae maxime provident.
-       </p>
+       <p class="slider-description-js"></p>
        <ul class="stack-box-js"></ul>
        <button class="button-more-js">
         <i class="bi bi-github"></i>Подробнее...
@@ -243,7 +239,11 @@
    </div>
    <div class="contact-section" id="contact-section">
     <h2>Контакт со мной</h2>
-    <form class="contact-container">
+    <form
+     id="contact-form"
+     class="contact-container"
+     onsubmit="sendMail(event)"
+    >
      <div class="input-container">
       <label for="name">Имя*</label>
       <input type="text" id="name" placeholder="Введите ваше имя" required />
@@ -263,7 +263,7 @@
       ></textarea>
      </div>
 
-     <button id="contact-submit" onclick="sendMail()">отправить</button>
+     <button id="contact-submit" type="submit">отправить</button>
     </form>
    </div>
   </main>
