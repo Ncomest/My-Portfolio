@@ -361,7 +361,10 @@ main .welcome-section .side-bar-left .sbl:first-child::before {
     top: -20px;
   }
 }
-main .welcome-section .side-bar-left .sbl i {
+main .welcome-section .side-bar-left .sbl a {
+  text-decoration: none;
+}
+main .welcome-section .side-bar-left .sbl a i {
   font-size: 40px;
   display: -webkit-box;
   display: -ms-flexbox;

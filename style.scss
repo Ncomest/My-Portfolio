@@ -210,13 +210,12 @@ header {
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  
 
   ul {
    display: flex;
    flex-direction: column;
    gap: 30px;
-  li {
+   li {
     list-style: none;
     a {
      text-decoration: none;
@@ -299,10 +298,13 @@ main {
      }
     }
 
-    i {
-     font-size: 40px;
-     display: flex;
-     color: $bg-color-light-grey;
+    a {
+      text-decoration: none;
+     i {
+      font-size: 40px;
+      display: flex;
+      color: $bg-color-light-grey;
+     }
     }
    }
   }
