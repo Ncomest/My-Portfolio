@@ -18,8 +18,8 @@ const slides = [
   text:
    "База данных фильмов на которой можно найти свой любимый фильм и узнать о нем больше, посмотреть актеров, описание фильма , найти похожии и рекомендуемые фильмы. Посмотреть отзывы других людей",
   icons: [
-   "https://img.icons8.com/?size=100&id=A6r5yddU9uA0&format=png&color=d4d4d4",
-   "https://img.icons8.com/?size=100&id=23028&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=38272&format=png&color=d4d4d4",
   ],
  },
 ];
@@ -86,8 +86,25 @@ function prevSlide() {
  showSlide(curSlide);
 }
 
-//-- Запуск функции
-nextSlide();
+//-- TODO: сделать фикс после нажатия
+let slideInterval;
+
+function startSlideSetInterval() {
+ clearInterval(slideInterval);
+ slideInterval = setInterval(() => {
+  nextSlide();
+ }, 3000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+ nextSlide();
+ startSlideSetInterval();
+});
+
+document.getElementById("next-slide").addEventListener("click", () => {
+ nextSlide();
+ startSlideSetInterval();
+});
 
 //-- Шарики справа экрана
 document.addEventListener("DOMContentLoaded", function () {

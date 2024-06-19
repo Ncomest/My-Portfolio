@@ -209,7 +209,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  padding: 100px 0;
 
   ul {
    display: flex;
@@ -500,8 +500,6 @@ main {
   .grid-container {
    width: 100%;
    display: grid;
-   align-items: center;
-   justify-content: center;
    grid-template-columns: repeat(3, minmax(100px, 1fr));
    gap: 20px;
    @media (max-width: 768px) {
@@ -532,15 +530,18 @@ main {
     .side-block {
      display: flex;
      align-items: center;
+
      @media (max-width: 425px) {
       gap: 10px;
       align-self: center;
      }
+
      img {
       width: 90px;
       height: 90px;
      }
     }
+
     .desc-header {
      font-size: 24px;
      color: $text-color-white;
@@ -553,6 +554,7 @@ main {
     }
 
     .description-block {
+     flex-grow: 1;
      @media (max-width: 425px) {
       display: none;
      }
@@ -588,7 +590,7 @@ main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 15px;
+   gap: 25px;
    width: 100%;
    overflow: hidden;
    position: relative;
@@ -599,11 +601,29 @@ main {
     align-items: center;
     justify-content: space-between;
     .btn-arrow {
+     display: flex;
+     align-items: center;
+     gap: 20px;
      cursor: pointer;
+
+     &:hover {
+      color: white;
+      transform: scale(1.15);
+      padding: 0px 10px;
+     }
 
      i {
       font-size: 40px;
       display: flex;
+      @media (max-width: 425px) {
+       font-size: 70px;
+      }
+     }
+
+     p {
+      @media (max-width: 425px) {
+       display: none;
+      }
      }
     }
     .btn-prev {
