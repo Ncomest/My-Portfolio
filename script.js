@@ -49,10 +49,10 @@ function showSlide(index) {
   descrElement.innerText = slide.text;
   slideElement.style.flexDirection =
    index % 2 === 0
-    ? windowWidth <= 768
+    ? windowWidth <= 992
       ? "column"
       : "row"
-    : windowWidth <= 768
+    : windowWidth <= 992
     ? "column"
     : "row-reverse";
 
@@ -86,22 +86,17 @@ function prevSlide() {
  showSlide(curSlide);
 }
 
-//-- TODO: сделать фикс после нажатия
+//-- Переключение с интервалом
 let slideInterval;
 
 function startSlideSetInterval() {
  clearInterval(slideInterval);
  slideInterval = setInterval(() => {
   nextSlide();
- }, 3000);
+ }, 7000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
- nextSlide();
- startSlideSetInterval();
-});
-
-document.getElementById("next-slide").addEventListener("click", () => {
  nextSlide();
  startSlideSetInterval();
 });

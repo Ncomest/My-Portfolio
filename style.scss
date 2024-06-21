@@ -441,6 +441,9 @@ main {
    @media (max-width: 425px) {
     display: none;
    }
+   @media (max-height: 425px) {
+    display: none;
+   }
 
    .sbr {
     width: 20px;
@@ -502,6 +505,11 @@ main {
    display: grid;
    grid-template-columns: repeat(3, minmax(100px, 1fr));
    gap: 20px;
+
+   @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+   }
+
    @media (max-width: 768px) {
     grid-template-columns: repeat(1, minmax(150px, 1fr));
    }
@@ -608,8 +616,6 @@ main {
 
      &:hover {
       color: white;
-      transform: scale(1.15);
-      padding: 0px 10px;
      }
 
      i {
@@ -637,14 +643,11 @@ main {
     justify-content: space-around;
     gap: 20px;
     margin: auto;
-    height: 400px;
     transition: transform 0.5s ease;
 
     @media (max-width: 768px) {
-     display: flex;
-     flex-direction: column;
      height: 100%;
-     gap: 70px;
+    //  gap: 70px;
     }
 
     .slider-img-js {
@@ -659,8 +662,8 @@ main {
      @media (max-width: 1024px) {
       height: 300px;
      }
-     @media (max-width: 768px) {
-      height: 240px;
+     @media (max-width: 992px) {
+      height: 340px;
       width: 100%;
       border-radius: 10px;
      }
@@ -672,7 +675,7 @@ main {
      justify-content: space-between;
      width: 35%;
      gap: 10px;
-     @media (max-width: 768px) {
+     @media (max-width: 992px) {
       width: 100%;
      }
 
