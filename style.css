@@ -48,7 +48,7 @@ body::after {
   pointer-events: none;
   z-index: -1;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-height: 425px) {
   body::after {
     background: rgba(0, 0, 0, 0.6);
   }
@@ -71,7 +71,7 @@ header {
   z-index: 1;
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-height: 425px) {
   header {
     height: 60px;
     border: none;
@@ -94,7 +94,7 @@ header nav {
           align-items: center;
   gap: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-height: 425px) {
   header nav {
     display: none;
   }
@@ -209,6 +209,13 @@ header .burger i {
     display: flex;
   }
 }
+@media (max-height: 425px) {
+  header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 header .navbar-mobile {
   position: fixed;
   top: 0;
@@ -313,7 +320,7 @@ main .welcome-section .side-bar-left {
           justify-content: center;
   gap: 50px;
 }
-@media (max-width: 425px) {
+@media (max-width: 425px), (max-height: 425px) {
   main .welcome-section .side-bar-left {
     display: none;
   }
@@ -406,6 +413,12 @@ main .welcome-section .main-container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+  }
+}
+@media (max-height: 425px) {
+  main .welcome-section .main-container {
+    margin-top: 20px;
+    margin-right: 0;
   }
 }
 main .welcome-section .main-container .romb {
@@ -826,7 +839,7 @@ main .project-section .project-slider .slide-js .slider-img-js {
   border: 1px solid white;
   width: 65%;
   max-width: 800px;
-  height: 100%;
+  height: 400px;
   background-size: cover;
   background-position: center;
   -webkit-transition: background-image 0.5s ease;
@@ -925,7 +938,7 @@ main .contact-section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 50px;
+  gap: 70px;
   padding: 100px;
 }
 @media (max-width: 768px) {
@@ -947,7 +960,19 @@ main .contact-section h2 {
     font-size: 38px;
   }
 }
-main .contact-section .contact-container {
+main .contact-section .contacts-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .contact-section .contacts-block .my-contact {
+  width: 50%;
+}
+main .contact-section .contacts-block .mail-section {
+  width: 50%;
+}
+main .contact-section .contacts-block .mail-section .contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -956,10 +981,10 @@ main .contact-section .contact-container {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  max-width: 500px;
+  min-width: 500px;
   width: 100%;
 }
-main .contact-section .contact-container .input-container {
+main .contact-section .contacts-block .mail-section .contact-container .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -969,25 +994,25 @@ main .contact-section .contact-container .input-container {
           flex-direction: column;
   gap: 10px;
 }
-main .contact-section .contact-container .input-container input {
+main .contact-section .contacts-block .mail-section .contact-container .input-container input {
   padding: 10px;
   border-radius: 5px;
   outline: none;
   background-color: #d3d3d3;
 }
-main .contact-section .contact-container .input-container input:focus {
+main .contact-section .contacts-block .mail-section .contact-container .input-container input:focus {
   border: 2px solid rgb(0, 255, 21);
 }
-main .contact-section .contact-container .input-container textarea {
+main .contact-section .contacts-block .mail-section .contact-container .input-container textarea {
   padding: 10px;
   border-radius: 5px;
   outline: none;
   background-color: #d3d3d3;
 }
-main .contact-section .contact-container .input-container textarea:focus {
+main .contact-section .contacts-block .mail-section .contact-container .input-container textarea:focus {
   border: 2px solid rgb(0, 255, 21);
 }
-main .contact-section .contact-container button {
+main .contact-section .contacts-block .mail-section .contact-container button {
   border: 1px solid #a2a2a2;
   background: linear-gradient(170deg, white, rgb(64, 64, 64));
   -webkit-box-shadow: inset 2px 2px 2px 0 #fff;
@@ -997,10 +1022,10 @@ main .contact-section .contact-container button {
   width: 100%;
   padding: 10px 20px;
 }
-main .contact-section .contact-container button:hover {
+main .contact-section .contacts-block .mail-section .contact-container button:hover {
   background: #e1e1e1;
 }
-main .contact-section .contact-container button:active {
+main .contact-section .contacts-block .mail-section .contact-container button:active {
   background-color: #5e5e5e;
   -webkit-box-shadow: inset 0 0 5px rgb(0, 0, 0);
           box-shadow: inset 0 0 5px rgb(0, 0, 0);
