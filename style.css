@@ -545,6 +545,7 @@ main .welcome-section .side-bar-right {
 @media (max-width: 992px) {
   main .welcome-section .side-bar-right {
     width: 50px;
+    right: -15px;
   }
 }
 @media (max-width: 768px) {
@@ -611,7 +612,7 @@ main .skills-section {
   padding: 100px;
   gap: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   main .skills-section {
     gap: 10px;
     padding: 50px;
@@ -738,7 +739,7 @@ main .project-section {
   gap: 40px;
   padding: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   main .project-section {
     padding: 50px;
   }
@@ -941,7 +942,7 @@ main .contact-section {
   gap: 70px;
   padding: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   main .contact-section {
     padding: 50px;
   }
@@ -965,12 +966,81 @@ main .contact-section .contacts-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  main .contact-section .contacts-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+  }
 }
 main .contact-section .contacts-block .my-contact {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  main .contact-section .contacts-block .my-contact {
+    width: 100%;
+  }
+}
+main .contact-section .contacts-block .my-contact .label-block-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+main .contact-section .contacts-block .my-contact .label-block-contact h4 {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+}
+main .contact-section .contacts-block .my-contact .text-block-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+main .contact-section .contacts-block .my-contact .text-block-contact p :hover {
+  color: #1000ee;
+}
+main .contact-section .contacts-block .my-contact .text-block-contact p a {
+  text-decoration: none;
+  color: #d4d4d4;
 }
 main .contact-section .contacts-block .mail-section {
   width: 50%;
+}
+@media (max-width: 768px) {
+  main .contact-section .contacts-block .mail-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
 }
 main .contact-section .contacts-block .mail-section .contact-container {
   display: -webkit-box;
@@ -981,7 +1051,7 @@ main .contact-section .contacts-block .mail-section .contact-container {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  min-width: 500px;
+  max-width: 500px;
   width: 100%;
 }
 main .contact-section .contacts-block .mail-section .contact-container .input-container {
