@@ -792,11 +792,16 @@ main {
      display: flex;
      flex-direction: column;
      gap: 40px;
-
-     h4 {
-      font-weight: bold;
-      text-transform: capitalize;
-      color: white;
+     div {
+      display: flex;
+      gap: 10px;
+      i {
+      }
+      h4 {
+       font-weight: bold;
+       text-transform: capitalize;
+       color: white;
+      }
      }
     }
 
