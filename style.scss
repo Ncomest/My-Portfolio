@@ -79,10 +79,10 @@ header {
  align-items: center;
  justify-content: flex-end;
  height: 80px;
- border: 1px solid $bg-color-grey;
- background-color: $bg-color-dark-transp;
+ //  border: 1px solid $bg-color-grey;
+ //  background-color: $bg-color-dark-transp;
  z-index: 1;
- margin-bottom: 20px;
+ margin: 20px 0;
 
  @media (max-width: 768px), (max-height: 425px) {
   height: 60px;
@@ -263,8 +263,8 @@ main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
    gap: 50px;
+   transform: translateY(15%);
 
    @media (max-width: 425px), (max-height: 425px) {
     display: none;
@@ -277,6 +277,13 @@ main {
     width: 50px;
     height: 50px;
     position: relative;
+    &:hover {
+     a {
+      i {
+       color: $text-color-blue;
+      }
+     }
+    }
     &::after {
      content: " ";
      position: absolute;
@@ -467,18 +474,19 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     &:not(:last-child)::after {
      content: " ";
      position: absolute;
      width: 2px;
      display: block;
      height: 50px;
-     background-color: aliceblue;
+     background-color: $bg-button-default;
      top: 20px;
      left: 9px;
     }
    }
+
    .active {
     background-color: #0000c1;
     transition: background-color 1s;
