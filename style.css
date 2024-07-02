@@ -847,34 +847,34 @@ main .project-section .project-slider .slide-js .slider-img-js {
 }
 @media (max-width: 2560px) {
   main .project-section .project-slider .slide-js .slider-img-js {
-    height: 500px;
+    height: 450px;
   }
 }
 @media (max-width: 1440px) {
   main .project-section .project-slider .slide-js .slider-img-js {
-    height: 460px;
+    height: 440px;
   }
 }
 @media (max-width: 1024px) {
   main .project-section .project-slider .slide-js .slider-img-js {
-    height: 320px;
+    height: 280px;
   }
 }
 @media (max-width: 992px) {
   main .project-section .project-slider .slide-js .slider-img-js {
-    height: 500px;
+    height: 450px;
     width: 100%;
     border-radius: 10px;
   }
 }
 @media (max-width: 768px) {
   main .project-section .project-slider .slide-js .slider-img-js {
-    height: 410px;
+    height: 360px;
   }
 }
 @media (max-width: 425px) {
   main .project-section .project-slider .slide-js .slider-img-js {
-    height: 230px;
+    height: 210px;
   }
 }
 main .project-section .project-slider .slide-js .slider-text-box-js {
