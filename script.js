@@ -1,14 +1,17 @@
 //-- Данные для слайдера
 const slides = [
  {
-  web: "https://ncomest.github.io/Landing-market/",
-  image: `url("image/project1.png")`,
-  title: "Landing page",
+  web: "https://ncomest.github.io/My-Portfolio/",
+  image: `url("image/portfolio.png")`,
+  title: "Портфолио",
   text:
-   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, officia magni earum aliquid temporibus tempore, molestias nisi minus deleniti sed laudantium facilis delectus harum! Unde culpa itaque deserunt iusto assumenda.",
+   "Создание порфтолио в современном дизайне, подчеркивание навыков и проектов с которыми можно ознакомится. Выбор контактов для связи, а так же форма обратной связи",
   icons: [
-   "https://img.icons8.com/?size=100&id=cHBUT9SmrD2V&format=png&color=d4d4d4",
-   "https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=39854&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=PwvuIX3srapO&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=23028&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=OODqBWCdRF8o&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
   ],
  },
  {
@@ -19,7 +22,9 @@ const slides = [
    "База данных фильмов на которой можно найти свой любимый фильм и узнать о нем больше, посмотреть актеров, описание фильма , найти похожии и рекомендуемые фильмы. Посмотреть отзывы других людей",
   icons: [
    "https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4",
-   "https://img.icons8.com/?size=100&id=38272&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=38273&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=39854&format=png&color=d4d4d4",
+   "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
   ],
  },
 ];
