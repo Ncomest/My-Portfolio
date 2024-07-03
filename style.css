@@ -503,21 +503,48 @@ main .welcome-section .main-container h1 {
   }
 }
 main .welcome-section .main-container h1 span {
+  position: relative;
+  color: #191118;
+  padding: 10px 50px;
   text-transform: uppercase;
-  font-size: 96px;
   font-weight: bold;
   font-size: 60px;
-  color: #020289;
-  text-shadow: 3px 3px 2px rgb(0, 136, 255), 10px 10px 1em blue;
+}
+main .welcome-section .main-container h1 span:before {
+  background: rgba(165, 165, 165, 0.6901960784);
+  color: #ffffff;
+  content: "FRONTEND";
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 60px;
+  -webkit-clip-path: polygon(0% 0%, 30% 0%, 30% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 30% 0%, 30% 100%, 0% 100%);
+  -webkit-animation: slide 4s 1s linear infinite;
+          animation: slide 4s 1s linear infinite;
 }
 @media (max-width: 768px) {
-  main .welcome-section .main-container h1 span {
+  main .welcome-section .main-container h1 span:before {
     font-size: 54px;
   }
 }
 @media (max-width: 425px) {
-  main .welcome-section .main-container h1 span {
+  main .welcome-section .main-container h1 span:before {
     font-size: 48px;
+  }
+}
+@-webkit-keyframes slide {
+  50% {
+    -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%);
+  }
+}
+@keyframes slide {
+  50% {
+    -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%);
   }
 }
 main .welcome-section .side-bar-right {
