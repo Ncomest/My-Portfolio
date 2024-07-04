@@ -426,18 +426,13 @@ main {
 
     span {
      font-family: "Rubik Mono One", monospace;
-     color: $text-color-blue;
+     color: #088e85;
      text-transform: uppercase;
      font-weight: 200;
      font-size: 60px;
-     text-shadow: 3px 3px 2px #dddddd;
+     text-shadow: none;
      @media (max-width: 768px) {
       font-size: 34px;
-      text-shadow: 1px 1px 2px #dddddd;
-     }
-
-     @media (max-width: 425px) {
-      font-size: 28px;
      }
     }
    }
