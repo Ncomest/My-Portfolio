@@ -1,7 +1,8 @@
 //-- Данные для слайдера
 const slides = [
  {
-  web: "https://ncomest.github.io/My-Portfolio/",
+  web: "https://github.com/Ncomest/My-Portfolio",
+  site: "https://ncomest.github.io/My-Portfolio",
   image: `url("image/portfolio.png")`,
   title: "Портфолио",
   text:
@@ -15,7 +16,7 @@ const slides = [
   ],
  },
  {
-  web: "https://wtube.vercel.app",
+  web: "https://github.com/Ncomest/Wtube",
   image: "url(image/wtube.png)",
   title: "WTube - база данных фильмов",
   text:
@@ -45,6 +46,7 @@ function showSlide(index) {
  const descrElement = document.querySelector(".slider-description-js");
  const iconsList = document.querySelector(".stack-box-js");
  const btnMore = document.querySelector(".button-more-js");
+ const lookBtn = document.querySelector(".looking-site-js");
  const windowWidth = window.innerWidth;
  console.log(windowWidth);
 
@@ -73,6 +75,10 @@ function showSlide(index) {
 
   btnMore.onclick = () => {
    window.open(slide.web, "_blank");
+  };
+
+  lookBtn.onclick = () => {
+   window.open(slide.site, "_blank");
   };
 
   setTimeout(() => (isTransition = false), 500);

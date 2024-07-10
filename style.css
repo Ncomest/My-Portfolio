@@ -918,7 +918,7 @@ main .project-section .project-slider .slide-js .slider-text-box-js ul li img {
     height: 45px;
   }
 }
-main .project-section .project-slider .slide-js .slider-text-box-js .button-more-js {
+main .project-section .project-slider .slide-js .slider-text-box-js .btn-in-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,17 +927,19 @@ main .project-section .project-slider .slide-js .slider-text-box-js .button-more
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   background: linear-gradient(170deg, white, rgb(64, 64, 64));
 }
-main .project-section .project-slider .slide-js .slider-text-box-js .button-more-js:hover {
+main .project-section .project-slider .slide-js .slider-text-box-js .btn-in-slider:hover {
   background: #e1e1e1;
 }
-main .project-section .project-slider .slide-js .slider-text-box-js .button-more-js:active {
+main .project-section .project-slider .slide-js .slider-text-box-js .btn-in-slider:active {
   background-color: #5e5e5e;
   -webkit-box-shadow: inset 0 0 5px rgb(0, 0, 0);
           box-shadow: inset 0 0 5px rgb(0, 0, 0);
+}
+main .project-section .project-slider .slide-js .slider-text-box-js .btn-more {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 main .contact-section {
   display: -webkit-box;

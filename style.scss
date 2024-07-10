@@ -741,14 +741,13 @@ main {
        }
       }
      }
-     .button-more-js {
+     .btn-in-slider {
       display: flex;
       width: 150px;
       gap: 5px;
       padding: 5px 10px;
       border-radius: 5px;
       cursor: pointer;
-      align-self: flex-end;
       background: linear-gradient(170deg, white, rgb(64, 64, 64));
 
       &:hover {
@@ -758,6 +757,10 @@ main {
        background-color: $bg-button-active;
        box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
       }
+     }
+
+     .btn-more {
+      align-self: flex-end;
      }
     }
    }
