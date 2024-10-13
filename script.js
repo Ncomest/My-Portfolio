@@ -17,6 +17,7 @@ const slides = [
  },
  {
   web: "https://github.com/Ncomest/Wtube",
+  site: "https://wtube.vercel.app",
   image: "url(image/wtube.png)",
   title: "WTube - база данных фильмов",
   text:
