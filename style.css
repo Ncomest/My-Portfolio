@@ -812,6 +812,22 @@ main .project-section .project-slider .btn-slider-container .btn-arrow i {
     display: none;
   }
 }
+main .project-section .project-slider .btn-slider-container .dots-slider-js {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+main .project-section .project-slider .btn-slider-container .dots-slider-js .dot-js {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #dadada;
+  border-radius: 50%;
+}
+main .project-section .project-slider .btn-slider-container .dots-slider-js .active {
+  background-color: #fff;
+}
 main .project-section .project-slider .slide-js {
   display: -webkit-box;
   display: -ms-flexbox;
