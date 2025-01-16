@@ -6,14 +6,16 @@ const slides = [
     site: "https://worldofcards.online:4434",
     image: `url("image/card.png")`,
     title: "Настольная игра",
-    text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, deserunt beatae, non dolorum officiis nam velit, quis amet minima laudantium corporis quo commodi?",
+    text: "Веб-приложение настольной игры, разработанное с использованием современных технологий MERN. Реализован удобный чат на WebSocket для комфортного общения. Серверная часть создана на Node.js с использованием Express.js, обеспечивая простоту и высокую производительность. API поддерживает CRUD-операции и версионирование, авторизация реализована через JWT с защитой хэшируемых данных. Для повышения безопасности применен CORS. В качестве веб-сервера используется Nginx, обеспечивающий гибкость и скорость работы. Интерфейс построен на React в формате SPA для плавной и удобной работы пользователей.",
     icons: [
-      "https://img.icons8.com/?size=100&id=39854&format=png&color=d4d4d4",
-      "https://img.icons8.com/?size=100&id=PwvuIX3srapO&format=png&color=d4d4d4",
-      "https://img.icons8.com/?size=100&id=23028&format=png&color=d4d4d4",
-      "https://img.icons8.com/?size=100&id=OODqBWCdRF8o&format=png&color=d4d4d4",
-      "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
+      // "https://img.icons8.com/?size=100&id=39854&format=png&color=d4d4d4",
+      "https://img.icons8.com/?size=100&id=cHBUT9SmrD2V&format=png&color=d4d4d4",
+      "https://img.icons8.com/?size=100&id=WC9GOvjtKVuH&format=png&color=d4d4d4",
+      "https://img.icons8.com/?size=100&id=Cturu2Go3SkB&format=png&color=d4d4d4",
+      "https://img.icons8.com/?size=100&id=FQlr_bFSqEdG&format=png&color=d4d4d4",
+      "https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4",
     ],
+    nameTech: ["TS", "MongoDB", "NGINX", "NodeJS", "React"],
   },
   {
     web: "https://github.com/Ncomest/My-Portfolio",
@@ -26,8 +28,9 @@ const slides = [
       "https://img.icons8.com/?size=100&id=PwvuIX3srapO&format=png&color=d4d4d4",
       "https://img.icons8.com/?size=100&id=23028&format=png&color=d4d4d4",
       "https://img.icons8.com/?size=100&id=OODqBWCdRF8o&format=png&color=d4d4d4",
-      "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
+      // "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
     ],
+    nameTech: ["JS", "SCSS", "HTML", "Bootstrap"],
   },
   {
     web: "https://github.com/Ncomest/Wtube",
@@ -39,13 +42,14 @@ const slides = [
       "https://img.icons8.com/?size=100&id=viH7JJy51bHj&format=png&color=d4d4d4",
       "https://img.icons8.com/?size=100&id=38273&format=png&color=d4d4d4",
       "https://img.icons8.com/?size=100&id=39854&format=png&color=d4d4d4",
-      "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
+      // "https://img.icons8.com/?size=100&id=38389&format=png&color=d4d4d4",
     ],
+    nameTech: ["React", "CSS", "JS", "Git"],
   },
 ];
 
 //-- Для слайдера
-let curSlide = 0;
+let curSlide = -1;
 let isTransition = false;
 let slideInterval;
 
@@ -64,16 +68,18 @@ function showSlide(index) {
   const slide = slides[index];
   const slideElement = document.querySelector(".slide-js");
   const imageElement = document.querySelector(".slider-img-js");
+  // const nameTechElement = document.querySelector(".name-stack-js");
   const titleElement = document.querySelector(".slider-title-js");
   const descrElement = document.querySelector(".slider-description-js");
   const iconsList = document.querySelector(".stack-box-js");
   const btnMore = document.querySelector(".button-more-js");
   const lookBtn = document.querySelector(".looking-site-js");
   const windowWidth = window.innerWidth;
-  console.log(windowWidth);
+  // console.log(windowWidth);
 
   setTimeout(() => {
     imageElement.style.backgroundImage = slide.image;
+
     titleElement.innerText = slide.title;
     descrElement.innerText = slide.text;
     slideElement.style.flexDirection =
@@ -86,14 +92,32 @@ function showSlide(index) {
         : "row-reverse";
 
     iconsList.innerHTML = "";
-    slide.icons.forEach((icon) => {
+    slide.icons.forEach((icon, index) => {
       const li = document.createElement("li");
       const img = document.createElement("img");
 
       img.src = icon;
       li.appendChild(img);
+
+      if (slide.nameTech[index]) {
+        const techText = document.createElement("span");
+
+        techText.classList.add("name-stack-js");
+
+        techText.innerText = slide.nameTech[index];
+        li.appendChild(techText);
+      }
+
       iconsList.appendChild(li);
     });
+
+    // nameTechElement.innerHTML = "";
+    // slide.nameTech.forEach((tech) => {
+    //   const li = document.createElement("li");
+    //   // const p = document.createElement("p");
+    //   li.innerText = tech;
+    //   iconsList.appendChild(li);
+    // });
 
     btnMore.onclick = () => {
       window.open(slide.web, "_blank");
@@ -122,6 +146,7 @@ function prevSlide() {
 }
 
 const sliderOnMouse = document.querySelector(".project-slider");
+// console.log(sliderOnMouse, "true");
 sliderOnMouse.addEventListener("mouseenter", stopSlider);
 sliderOnMouse.addEventListener("mouseleave", startSlider);
 
@@ -242,8 +267,8 @@ document.getElementById("burgerMenu").addEventListener("click", function () {
 
 //-- Функция для закрытия меню
 function closeMenu() {
-  var navbarMobile = document.getElementById("navbarMobile");
-  var body = document.body;
+  const navbarMobile = document.getElementById("navbarMobile");
+  const body = document.body;
   navbarMobile.classList.remove("active");
   body.classList.remove("no-scroll");
 }

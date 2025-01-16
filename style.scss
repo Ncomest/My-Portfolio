@@ -659,9 +659,6 @@ main {
         .dots-slider-js {
           display: flex;
           gap: 10px;
-          // background: wheat;
-          // width: 300px;
-          // height: 20px;
           .dot-js {
             display: block;
             width: 10px;
@@ -739,6 +736,14 @@ main {
             }
           }
 
+          .slider-description-js {
+            // display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // -webkit-line-clamp: 3;
+          }
+
           ul {
             .stack-box-js {
               list-style: none;
@@ -746,8 +751,11 @@ main {
             }
 
             li {
-              display: inline-block;
+              display: inline-flex;
+              flex-direction: column;
+              // justify-content: center;
               margin-right: 10px;
+              gap: 5px;
               img {
                 width: 70px;
                 height: 70px;
@@ -755,6 +763,9 @@ main {
                   width: 45px;
                   height: 45px;
                 }
+              }
+              .name-stack-js {
+                text-align: center;
               }
             }
           }

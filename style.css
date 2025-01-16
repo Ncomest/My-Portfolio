@@ -921,8 +921,15 @@ main .project-section .project-slider .slide-js .slider-text-box-js ul .stack-bo
   padding: 0;
 }
 main .project-section .project-slider .slide-js .slider-text-box-js ul li {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 10px;
+  gap: 5px;
 }
 main .project-section .project-slider .slide-js .slider-text-box-js ul li img {
   width: 70px;
@@ -933,6 +940,9 @@ main .project-section .project-slider .slide-js .slider-text-box-js ul li img {
     width: 45px;
     height: 45px;
   }
+}
+main .project-section .project-slider .slide-js .slider-text-box-js ul li .name-stack-js {
+  text-align: center;
 }
 main .project-section .project-slider .slide-js .slider-text-box-js .btn-in-slider {
   display: -webkit-box;
